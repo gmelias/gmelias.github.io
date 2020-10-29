@@ -1,0 +1,122 @@
+<!DOCTYPE>
+<style>
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: yellow;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+  .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .item2 {
+    background: LightSkyBlue;
+    grid-area: advert;
+    font-size: 16px;
+  }
+
+  .item3 {
+    background: LightSkyBlue;
+    grid-area: content;
+    font-size: 16px;
+  }
+
+  .item4 {
+    background: LightSkyBlue;
+    grid-area: footer;
+    font-size: 16px;
+  }
+
+  .itemOne {
+    background: LightSkyBlue;
+  }
+
+  .itemTwo {
+    background: LightSkyBlue;
+  }
+  
+main {
+  font-family: monospace, comic-sans;
+  background: yellow;
+  padding: 5px;
+  
+}
+.title {
+  font-family: monospace;
+  
+}
+
+h1 {
+  padding: 5px;
+}
+h2 {
+  padding: 5px;
+  position: center;
+}
+p {
+  padding: 5px;
+  
+}
+#img-div {
+  background: LightSkyBlue;
+}
+#image {
+  width: 200px;
+  height: 245px;
+  position: center;
+  border-color: blue;
+  border-width: 5px;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}  
+#img-caption {
+   font-family:monospace;
+   font-size: 12px;
+}
+#tribute-info {
+  background: LightSkyBlue;
+}
+#tribute-link {
+  target="_blank"
+}
+#tribute-quote {
+  font-family: georgia, arial;
+  font-size: 18px;
+  text-align: center;
+}
+</style>
+
+<html>
+<main>
+  <head>
+  <title>John Wooden</title>
+  </head>
+<body>
+<div class="container">
+  <div class="item1"><h1>A Tribute to John Wooden</h1><a href="#">
+    <div id="img-div"><img id="image" src="https://2.bp.blogspot.com/-8Gwo97N-qFM/U3UFZtvpWhI/AAAAAAAAAL8/BI9mkyjy4Qg/s1600/JohnWooden.jpg" alt="Profile image of John Wooden."></a><p id="img-caption">John Wooden coaching at UCLA</p></div>
+  </div>
+  <div class="item3">
+    <div class="itemOne"><h2>John Wooden is a Legend.</h2> <p>Here is his story:</p><p id="tribute-info">John Wooden was a both a college backetball player and coach, but he is most well-known for his time at UCLA. There, he won 10 NCAA championships, including 7 in a row (which was a record). He became widely known for his <b>Pyramid of Success</b>. This not only gave guidance on how to be a better athlete, but on how to be successful in life. He cared about his athletes both on and off the court, and encouraged them to work hard in the classroom.<br><br><b><u>About the Pyramid of Success</b></u><br>John Wooden spent a large portion of his life studying successful people and the traits that led them there. These traits were not limited to basketball or athletics. By the time he was 38, he had narrowed the list down to 25, which is displayed in a triangle fashion. Some examples of these traits include:<ul><li><b>Industriousness</b> - There is no substitute for work. Worthwhile results come from hard work and careful planning.</li><li><b>Initiative</b> - Cultivate the ability to make decisions and think alone. Do not be afraid of failure, but learn from it.</li><li><b>Skill</b> - A knowledge of and the ability to properly and quickly execute the fundamentals. Be prepared and cover every little detail.</li></ul><a id="tribute-link" href="https://www.thewoodeneffect.com/pyramid-of-success/">Click here to read more about his 25 traits.</a></p></div>
+    <div class="itemTwo" id="tribute-quote"><p>It's the little details that are vital. Little things make big things happen.</p><p>-John Wooden</p></div>
+  </div>
+    
+  <div class="item4"><p>Citations and Credits: Information about John Wooden from wikipedia.org, thewoodenaffect.com; HTML/CSS information from freeCodeCamp.org <br>This was a project for freeCodeCamp.org </p></div>
+</div>
+
+  </body>
+</main>
+</html>
