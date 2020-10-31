@@ -1,0 +1,209 @@
+<!DOCTYPE>
+<style>
+.item1 {
+  background: #F5E1FD;
+  grid-area: header;
+}
+.item2 {
+  background:violet;
+  grid-area: content;
+}
+.item3 {
+  background: yellow;
+  grid-area: advert1;
+  background: url("https://pensaraeducacao.com.br/wp-content/uploads/2017/05/buckeye_leaf_diamond_graywhite.jpg")
+}
+.content1 {
+  background:violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content2 {
+  background: violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content3 {
+  background:violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content4 {
+  background:violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content5 {
+  background:violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content6 {
+  background: violet;
+  grid-area: content;
+  padding: 10px;
+}
+.content7 {
+  background: violet;
+  grid-area: content;
+  padding: 10px;
+}
+.item4 {
+  background:orange;
+  grid-area: advert2;
+  background: url("https://pensaraeducacao.com.br/wp-content/uploads/2017/05/buckeye_leaf_diamond_graywhite.jpg")
+}
+.item5 {
+  background: purple;
+  grid-area: footer;
+}
+.container {
+  font-size: 15px;
+  min-height: 300px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "advert1 content advert2"
+    "footer footer footer";
+  font-family: monospace;
+  background: WHITE;
+}
+main {
+  background: yellow;
+}
+h2 {
+  font-size: 17px;
+}
+#survey-form {
+  font-family: arial;
+}
+#description {
+  font-family: arial;
+}
+#title {
+  font-size: 26px;
+}
+#name {
+  width: 600px;
+}
+#name-label {
+  size="20";
+}
+#email {
+  width: 600px;
+}
+#email-label{
+  size="20";
+}
+#number-label{
+  size= "20";
+}
+#number{
+  min: "10";
+  max: "100";
+}
+#comments{
+  size="20";
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+</style>
+
+<html>
+<main>
+<div class="container">
+  <div class="item1" align="center"><h1 id="title">Survey Form</h1><p id="description">Thank you for your time. Please fill the form out to the best of your ability.</div>
+  <div class="item2">
+    <form id="survey-form">
+      <div class="content1" id="name"><h2>Question 1</h2><p>What is your name?</p><input id="name-label" type = "text" placeholder = "Name"></div>
+      <div class="content2" id="email"><h2>Question 2</h2><p>What is your email? </p><input id="email-label" type = "email" size="20" required placeholder="Email Address"></div>
+      <div class="content3"><h2>Question 3</h2><p>What is your favorite school subject? (Pick 1)</p>
+        <label for="math">
+          <input id="math" type="radio" name="favorite-subject" value="math">Math</label>
+        <label for="science">
+          <input id="science" type="radio" name="favorite subject">Science</label>
+        <label for="language arts">
+          <input id="language-arts" type="radio" name="favorite subject" value="language arts">Language Arts</label>
+        <label for="arts">
+          <input id="arts" type="radio" name="favorite-subject" value="arts">Arts</label>
+        <label for-"physical education">
+          <input id="physical fitness" type="radio" name="favorite subject" value="physical education">Physical Education</label>
+        <label for="other">
+          <input id="other" type="radio" name="favorite-subject" value="other">Other</label>
+          </div>
+      <div class="content4"><h2>Question 4</h2><p>Where have you lived?</div>
+        <label for="Europe"><input id="Europe" value="Europe" type="checkbox" name="living-location">Europe</label>
+        <label for="North America"><input id="North America" value="North America" type="checkbox" name="living-location">North America</label>
+        <label for="Asia"><input id="Asia" value="Asia" type="checkbox" name="living-location">Asia</label>
+        <label for="South America"><input id="South America" value="South America" type="checkbox" name="living-location">South America</label>
+        <label for="Antartica"><input id="Antartica" value="Antartica" type="checkbox" name="living-location">Antartica</label>
+        <label for="Australia"><input id="Australia" value="Australia" type="checkbox" name="living-location">Australia</label>
+        <label for="Africa"><input id="Africa" value="Africa" type="checkbox" name="living-location">Africa</label>
+      <div class="content5" id="number"><h2>Question 5</h2><p>How old are you?</p>
+        <input id="number-label" type="number" placeholder="Age">
+      </div>
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+        </div>
+          
+        
+      </div>
+      <div class="content6" id="comments"><h2>Question 7</h2><p>Feel free to add any additional comments or questions below.</p> 
+        <input type="textarea" placeholder="Questions and Comments">
+        <br><br><button type="submit">Submit Form</button>
+        <br><p align="center">Thank you again for your time!</p></div>
+        </form>    
+  </div>
+  <div class="item3"></div>
+  <div class="item4"></div>
+  <div class="item5"><p align="center">This was created as a project for freeCodeCamp.org.</div>
+</div>
+</main>
+</html>
