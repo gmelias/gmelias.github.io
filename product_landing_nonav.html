@@ -1,0 +1,114 @@
+<!DOCTYPE>
+<style>
+main {
+  font: arial;
+}
+.item1 {
+  background: #F5E1FD;
+  grid-area: header;
+  background-color: PaleTurquoise;
+  grid-template-columns: 1fr auto;
+  display: grid;
+  grid-template-areas:
+      "name navbar"
+}
+.content1 {
+  background-color: orange;
+  grid-area: name;
+  padding: 10px;
+}
+.content2 {
+  background: violet;
+  grid-area: navbar;
+  padding: 25px;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  text-align: center;
+  grid-template-areas:
+      "about function price contact"
+}
+.nav1 {
+  background-color:red;
+  grid-area: about;
+  padding: 5px;
+}
+.nav2 {
+  background-color:orange;
+  grid-area: function;
+  padding: 5px;
+}
+.nav3 {
+  background-color:yellow;
+  grid-area: price;
+  padding: 5px;
+}
+.nav4 {
+  background-color:green;
+  grid-area: contact;
+  padding: 5px;
+}
+.item2 {
+  background:violet;
+  grid-area: content;
+}
+.item3 {
+  background: yellow;
+  grid-area: advert1;
+}
+.item4 {
+  background: yellow;
+  grid-area: advert2;
+}
+.item5 {
+  background: #ECECEC;
+  grid-area: footer;
+}
+.container {
+  font-size: 15px;
+  min-height: 300px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "advert1 content advert2"
+    "footer footer footer";
+  font-family: monospace;
+  background-color: black;
+  padding: 10px;
+}
+
+a { 
+  color: inherit; 
+  text-decoration: inherit; 
+}
+</style>
+<html>
+<main>
+<div class="container">
+  <div class="item1">
+    <div class="content1"><h1>CompanyName test</h1>
+    </div>
+    <div class="content2">
+      <a href="http://example.com"> 
+        <div class="nav1"><p>About Us</p></div></a>
+      <a href="http://example.com">
+        <div class="nav2"><p>Features</p></div></a>
+      <a href="http://example.com">
+        <div class="nav3"><p>How it Works</p></div></a>
+      <a href="http://example.com">
+        <div class="nav4"><p>Pricing</p></div></a>
+    </div>
+  </div>
+  <div class="item2"><p>Content</p>
+  </div>
+  <div class="item3"><p>Advert1</p>
+  </div>
+  <div class="item4"><p>Advert2</p>
+  </div>
+  <div class="item5"><p>footer</p>
+  </div>
+</html>
