@@ -67,7 +67,7 @@ body {
 #welcome-section ul > li {
   list-style: none;
 }
-#welcome-section > ul > li > figure > img {
+#welcome-section > ul > li > a > img {
   width: 10vh;
   position: absolute;
 }  
@@ -85,23 +85,18 @@ body {
   border: 1px solid #092936;
   border-radius: .5rem;
 }
-#projects-grid > ul > li > figure {
-  max-height: 220px;
-  overflow: hidden;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-  position: relative;
-}
-#projects-grid > ul > li > figure > img {
-  width: 100%;
-}
-#projects-grid> ul > li > p {
+#projects-grid > ul > li > p {
   font-size: 1rem;
   line-height: 1.5;
   padding: 1rem .75rem;
   color: #092936;
 }
-#links {
+a {
+  color: inherit; 
+  text-decoration: inherit;
+}
+
+#profile-links {
   padding: 20px;
 }
 #links-grid {
@@ -124,11 +119,17 @@ footer {
   text-align: center;
   font-size: .75rem;
 }
+h3 {
+  text-align: center;
+}
+#projects-title {
+  color: inherit;
+}
 </style>
 <html>
 <section class="topnav">
   <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <a href="#projects">Projects</a>
   <a href="#about">About</a>
   <a href="#home">Home</a>
 </section>
@@ -136,31 +137,26 @@ footer {
 <section id="welcome-section">
   <h1>Hi, I'm Grace.</h1>
   <p>I develop websites.</p>
-  <ul id="links">
+  <ul id="profile-links">
      <li>
-       <a href="https://github.com/gmelias"> <img src="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg" width="50vh" padding="10vh" position="absolute"></a></li>
+       <a href="https://github.com/gmelias" target="_blank";> <img src="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg" width="50vh" padding="10vh" position="absolute"></a></li>
      <li> 
-       <a href="https://codepen.io/gmelias"><img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" width="50vh" padding="10vh" position="absolute"></a></li>
+       <a href="https://codepen.io/gmelias" target="_blank";><img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" width="50vh" padding="10vh" position="absolute"></a></li>
   </ul>
 </section>
 <body>
-  <section id="projects">
+  <section id="projects" class="projects">
   <h1>Here are some of my projects:</h1>
   <div id="projects-grid">
     <ul>
-      <li><a href="https://codepen.io/gmelias/full/LYZmwYO">
-        <figure><img src="https://codepen.io/gmelias/full/LYZmwYO" alt="Product Landing Page">
-          </a></figure>
-        <p>Product Landing Page: A website for companies and organizations to share their products with the internet.</p>
+      <li>
+      <a href="https://codepen.io/gmelias/full/LYZmwYO"target="_blank">
+        <h3 id="projects-title">Product Landing Page</h3></a><p> A website for companies and organizations to share their products with the internet.</p>
         </li>
-      <li><a href="https://gmelias.github.io/survey_form">
-        <figure><img src="https://gmelias.github.io/survey_form" alt="Survey Form Project">
-          </a></figure>
-        <p>Survey Form: A sample of how a survey can be constructed on a website with various options, such as checkboxes, text and radio buttons.</p></li>
-            <li><a href="https://gmelias.github.io/survey_form">
-        <figure><img src="https://gmelias.github.io/Tribute_Page" alt="Tribute Page">
-          </a></figure>
-        <p>Tribute Page: A page dedicated to John Wooden, who is a legendary athlete, coach, and mentor.</p></li>
+      <li><a href="https://gmelias.github.io/survey_form" target="_blank">
+        <h3 id="projects-title">Survey Form</h3></a><p> A sample of how a survey can be constructed on a website with various options, such as checkboxes, text and radio buttons.</p></li>
+            <li><a href="https://gmelias.github.io/survey_form" target="_blank">
+        <h3 id="projects-title">Tribute Page</h3></a> <p>A page dedicated to John Wooden, who is a legendary athlete, coach, and mentor.</p></li>
     </ul>
     </div>
   </section>
