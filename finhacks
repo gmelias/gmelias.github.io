@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * { 
+	        font-family: 'Lato', sans-serif;
+	        font-weight: 300;
+	        transition: all .2s ease; 
+        }
+        
+        html, body {
+		    height: 100%;
+		    text-align: center;
+        }
+
+        h1 {
+	        font-size: 40px;
+        }
+
+        .page-section {
+		    height: 480px;
+		    padding: 3em;
+  	        height: 100%;
+            background: linear-gradient(45deg, #232526 10%, #414345 90%);
+		    color: white;
+	
+		    &.main {
+			    background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);	
+		    }
+        &.hero > h1 {
+		    font-size:64px;
+	    }
+    }
+
+    .navigation {
+  	    position: fixed; 
+		width: 100%;
+  	    background-color: #43cea2;
+  	    color: #ddd;
+	
+        &_link {
+    	    color: #efe; 
+    	    text-decoration: none;
+    	    display: inline-block;
+    	    padding: 1em;
+			font-weight: 400;
+		
+		    &.active {
+		   	    color: white;
+				background-color: rgba(0,0,0,0.1);
+		   }
+  	}
+}
+    </style>
+</head>
+
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
+
+    <nav class="navigation" id="mainNav">
+			<a class="navigation_link" href="#1">Back to top</a>
+			<a class="navigation_link" href="#2">Your Portfolio</a>
+			<a class="navigation_link" href="#3">Stock Trends</a>
+			<a class="navigation_link" href="#4">Community Leaderboard</a>
+			<a class="navigation_link" href="#5">Your Account</a>
+    </nav>
+
+    <div class="page-section main" id="1">
+			<h1>Welcome Young Traders!</h1>
+			<h1>&darr;</h1>
+    </div>
+    <div class="page-section" id="2">
+			<h1>Your Portfolio Progress</h1>
+			
+    </div>
+    <div class="page-section" id="3">
+			<h1>Stock Trends</h1>
+	
+    </div>
+    <div class="page-section" id="4">
+			<h1>Community Leaderboard</h1>
+	
+    </div>
+    <div class="page-section" id="5">
+			<h1>Your Account</h1>
+	
+    </div>
+
+
+
+<script>
+    $(document).ready(function() {
+	    $('a[href*=#]').bind('click', function(e) {
+			e.preventDefault(); // prevent hard jump, the default behavior
+
+			var target = $(this).attr("href"); // Set the target as variable
+
+			// perform animated scrolling by getting top-position of target-element and set it as scroll target
+			$('html, body').stop().animate({
+				scrollTop: $(target).offset().top
+			}, 600, function() {
+					location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+	    		return false;
+		    });
+        });
+
+    $(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+
+		// Show/hide menu on scroll
+		if (scrollDistance >= 850) {
+			$('nav').fadeIn("fast");
+		} else {
+			$('nav').fadeOut("fast");
+		}
+	
+		// Assign active class to nav links while scolling
+		$('.page-section').each(function(i) {
+			if ($(this).position().top <= scrollDistance) {
+				$('.navigation a.active').removeClass('active');
+				$('.navigation a').eq(i).addClass('active');
+			}
+		});
+}).scroll();
+</script>
+
+</body>
+</html>
